@@ -1,14 +1,27 @@
 
+import Link from 'next/link';
+import './globals.css';
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <div>
-
-      <body >{children}</body>
-    </div>
-
-  )
+    <html>
+      <body>
+        <main>
+          <nav>
+            <Link href="/">
+              Home
+            </Link>
+            <Link href="/notes">
+              Notes
+            </Link>
+          </nav>
+          {children}
+        </main>
+      </body>
+    </html>
+  );
 }

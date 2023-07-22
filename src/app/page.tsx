@@ -1,7 +1,8 @@
 import TodoItem from "@/components/TodoItem";
 import { prisma } from "@/db";
 import Link from "next/link";
-
+// me
+// not issue
 async function getTodos() {
   return prisma.todo.findMany()
 }
@@ -25,7 +26,7 @@ export default async function Home() {
 
   return (<>
     <header className="flex justify-between items-center mb-4">
-      <h1 className="text-2xl">Todo</h1>
+      <h1 className="text-2xl">My Todo</h1>
       <Link href='/new' className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none">New</Link>
     </header>
 
